@@ -1,0 +1,45 @@
+GENERATED TILE DIRECTION=TP - LOCAL TILE DIRECTION=LI
+void kernel_seidel_2d(int tsteps, int n, double A[120+0][120+0][120+0])
+{
+   int t, i, j;
+   //PIPS generated variable
+   int i_t, j_t, i_l, j_l;
+
+#pragma scop
+   polybench_timer_start();
+
+   for(t = 1; t <= n-1; t += 1)
+loop_1:
+      for(i_t = 0; i_t <= (n-3)/4; i_t += 1)
+         for(j_t = (((-i_t)>(((-n+10)/8))) ? (-i_t): (((-n+10)/8))); j_t <= (-8*i_t+n-3)/8; j_t += 1)
+            for(i_l = (((1)>((-8*j_t+1))) ? (1): ((-8*j_t+1))); i_l <= (((-8*j_t+8)<((n-2))) ? (-8*j_t+8): ((n-2))); i_l += 1)
+               for(j_l = 8*i_t+8*j_t+1; j_l <= (((8*i_t+8*j_t+8)<((n-2))) ? (8*i_t+8*j_t+8): ((n-2))); j_l += 1)
+                  A[t][i_l][j_l] = (A[t-1][i_l-1][j_l-1]+A[t-1][i_l-1][j_l])/9.0;
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_seidel_2d(int tsteps, int n, double A[120+0][120+0][120+0])
+{
+   int t, i, j;
+   //PIPS generated variable
+   int i_t, j_t, i_l, j_l;
+
+#pragma scop
+   polybench_timer_start();
+
+   for(t = 1; t <= n-1; t += 1)
+loop_1:
+      for(i_t = 0; i_t <= (n-3)/4; i_t += 1)
+         for(j_t = (((-i_t)>(((-n+10)/8))) ? (-i_t): (((-n+10)/8))); j_t <= (-8*i_t+n-3)/8; j_t += 1)
+            for(i_l = (((1)>((-8*j_t+1))) ? (1): ((-8*j_t+1))); i_l <= (((-8*j_t+8)<((n-2))) ? (-8*j_t+8): ((n-2))); i_l += 1)
+               for(j_l = 8*i_t+8*j_t+1; j_l <= (((8*i_t+8*j_t+8)<((n-2))) ? (8*i_t+8*j_t+8): ((n-2))); j_l += 1)
+                  A[t][i_l][j_l] = (A[t-1][i_l-1][j_l-1]+A[t-1][i_l-1][j_l])/9.0;
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}

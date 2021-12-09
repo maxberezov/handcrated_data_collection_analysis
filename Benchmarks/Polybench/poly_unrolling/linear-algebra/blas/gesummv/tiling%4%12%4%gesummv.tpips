@@ -1,0 +1,26 @@
+delete tiling
+setenv PIPS_CPP_FLAGS  -I /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/linear-algebra/blas/gesummv/ -I /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/ -DPOLYBENCH_TIME -D EXTRALARGE_DATASET
+create tiling /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/linear-algebra/blas/gesummv/gesummv.c /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/polybench.c 
+setproperty ABORT_ON_USER_ERROR TRUE
+setproperty PRETTYPRINT_LANGUAGE "C"
+setproperty PRETTYPRINT_STATEMENT_NUMBER FALSE
+setproperty PRETTYPRINT_INTERNAL_INTRINSICS FALSE
+setproperty FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+setproperty TILE_DIRECTION "TP"
+setproperty LOCAL_TILE_DIRECTION "LP"
+setproperty PRETTYPRINT_MOVE_ALL_LOOP_BOUNDS_UP FALSE
+setproperty PRETTYPRINT_EXPAND_MIN_MAX_MACROS TRUE
+apply PARALLEL_LOOP_TILING[kernel_gesummv]
+l1
+16 0
+0 4
+display PRINTED_FILE[kernel_gesummv]
+apply PRIVATIZE_MODULE[kernel_gesummv]
+activate PRINT_PARALLELIZEDOMP_CODE
+apply COARSE_GRAIN_PARALLELIZATION[kernel_gesummv]
+display PRINTED_FILE[kernel_gesummv]
+apply CLEAN_LABELS[kernel_gesummv]
+apply KEEP_ONLY_ONE_EXTERN_PARALLEL_LOOP[kernel_gesummv]
+apply UNSPLIT
+close
+quit

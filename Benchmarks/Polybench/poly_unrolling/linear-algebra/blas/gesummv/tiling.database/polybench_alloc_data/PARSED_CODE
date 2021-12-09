@@ -1,0 +1,7 @@
+0 T71 R77 "TOP-LEVEL:@" -1 -1 !T51 0 T69 (T71 R77 "TOP-LEVEL:@" 564 -1 "
+
+
+
+/// FIXME: detect overflow!
+"T51 5 T33 R77 "TOP-LEVEL:CONTINUE" (T45 T76 2 T33 R77 "TOP-LEVEL:0" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:1" ()))N))))(R77 "polybench_alloc_data:0`val" )_T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 565 -1 ""T51 5 T33 R77 "TOP-LEVEL:*=" (T45 T76 0 T68 R77 "polybench_alloc_data:0`val" ()))N)T45 T76 0 T68 R77 "polybench_alloc_data:elt_size" ()))N))))()!T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 566 -1 ""T51 5 T33 R77 "TOP-LEVEL:CONTINUE" (T45 T76 2 T33 R77 "TOP-LEVEL:0" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:1" ()))N))))(R77 "polybench_alloc_data:0`ret" )_T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 568 -1 "
+"T51 5 T33 R77 "TOP-LEVEL:return" (T45 T76 0 T68 R77 "polybench_alloc_data:0`ret" ()))N))))()!T47 ())T75 0 U)))))(R77 "polybench_alloc_data:0`val" R77 "polybench_alloc_data:0`ret" )!T47 ())T75 0 U))

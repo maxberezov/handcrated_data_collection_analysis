@@ -1,0 +1,25 @@
+delete tiling
+setenv PIPS_CPP_FLAGS  -I /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/stencils/seidel_2d/ -I /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/ -DPOLYBENCH_TIME -D MINI_DATASET
+create tiling /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/stencils/seidel_2d/seidel_2d.c /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/polybench.c 
+setproperty ABORT_ON_USER_ERROR TRUE
+setproperty PRETTYPRINT_LANGUAGE "C"
+setproperty PRETTYPRINT_STATEMENT_NUMBER FALSE
+setproperty PRETTYPRINT_INTERNAL_INTRINSICS FALSE
+setproperty FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+setproperty TILE_DIRECTION "TS"
+setproperty LOCAL_TILE_DIRECTION "LP"
+setproperty PRETTYPRINT_MOVE_ALL_LOOP_BOUNDS_UP FALSE
+setproperty PRETTYPRINT_EXPAND_MIN_MAX_MACROS TRUE
+apply PARALLEL_LOOP_TILING[kernel_seidel_2d]
+loop_1
+4 8
+4 -8
+display PRINTED_FILE[kernel_seidel_2d]
+apply PRIVATIZE_MODULE[kernel_seidel_2d]
+activate PRINT_PARALLELIZEDOMP_CODE
+display PRINTED_FILE[kernel_seidel_2d]
+apply CLEAN_LABELS[kernel_seidel_2d]
+apply KEEP_ONLY_ONE_EXTERN_PARALLEL_LOOP[kernel_seidel_2d]
+apply UNSPLIT
+close
+quit

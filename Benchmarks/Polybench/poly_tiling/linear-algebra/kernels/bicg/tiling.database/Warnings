@@ -1,0 +1,353 @@
+COMPILATION_UNIT_PARSER[polybench!] (UpdateEntity) ("/home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/utilities/polybench.c":46) 
+Multiple declarations of variable "polybench_program_total_flops".
+Source code after preprocessing:
+double polybench_program_total_flops = 0;
+Input source code, before preprocessing:
+double polybench_program_total_flops = 0;
+
+TRANSFORMERS_INTER_FULL[polybench!xmalloc] (any_expression_to_transformer) line 523 
+at statement:
+
+	int err = posix_memalign(&ret, 4096, padded_sz);
+
+
+Implicit type coercion between variable "1" of type "int" and expression "posix_memalign(&ret, 4096, padded_sz)" of type "void * *" may reduce semantic analysis accuracy.
+You might apply 'type_checker' to explicit all type coercions.
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[polybench!xmalloc] (any_expression_to_transformer) line 523 
+at statement:
+
+	int err = posix_memalign(&ret, 4096, padded_sz);
+
+
+Implicit type coercion between variable "1" of type "int" and expression "posix_memalign(&ret, 4096, padded_sz)" of type "void * *" may reduce semantic analysis accuracy.
+You might apply 'type_checker' to explicit all type coercions.
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 124 
+at statement:
+
+	A = (double (*)[2200+0][1800+0]) polybench_alloc_data((2200+0)*(1800+0), sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 125 
+at statement:
+
+	s = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 126 
+at statement:
+
+	q = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 127 
+at statement:
+
+	p = (double (*)[1800+0]) polybench_alloc_data(1800+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 4 and formal 18
+TRANSFORMERS_INTER_FULL[main] (any_user_call_site_to_transformer) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Integer type conversion: actual 8 and formal 4
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_filter_subsumed_variables) line 128 
+at statement:
+
+	r = (double (*)[2200+0]) polybench_alloc_data(2200+0, sizeof(double));
+
+
+Value "polybench!:polybench_inter_array_padding_sz#init" is projected because of imprecise effects
+TRANSFORMERS_INTER_FULL[main] (transformer_general_consistency_p) No value for argument polybench!:polybench_inter_array_padding_sz in value mappings

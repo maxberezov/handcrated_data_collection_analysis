@@ -1,0 +1,267 @@
+Registering file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/stencils/heat_3d/heat_3d.c
+Checking C syntax of file "/home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/stencils/heat_3d/heat_3d.c"
+Preprocessing file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/stencils/heat_3d/heat_3d.c
+Splitting file    ./tiling.database/Tmp/heat_3d.cpp_processed.c
+  Module         main
+  Module         kernel_heat_3d
+  Module         heat_3d!print_array
+  Module         heat_3d!init_array
+  Module         heat_3d!
+Registering file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/polybench.c
+Checking C syntax of file "/home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/polybench.c"
+Preprocessing file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly/utilities/polybench.c
+Splitting file    ./tiling.database/Tmp/polybench.cpp_processed.c
+  Module         polybench_alloc_data
+  Module         polybench_free_data
+  Module         polybench!xmalloc
+  Module         polybench_timer_print
+  Module         polybench_timer_stop
+  Module         polybench_timer_start
+  Module         polybench_prepare_instruments
+  Module         polybench_flush_cache
+  Module         polybench!rtclock
+  Module         polybench!
+Workspace tiling created and opened.
+Main module PROGRAM "main" selected.
+Module main selected
+setproperty ABORT_ON_USER_ERROR TRUE
+setproperty PRETTYPRINT_LANGUAGE "C"
+setproperty PRETTYPRINT_STATEMENT_NUMBER FALSE
+setproperty PRETTYPRINT_INTERNAL_INTRINSICS FALSE
+setproperty FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+setproperty TILE_DIRECTION "TS"
+setproperty LOCAL_TILE_DIRECTION "LI"
+setproperty PRETTYPRINT_MOVE_ALL_LOOP_BOUNDS_UP FALSE
+setproperty PRETTYPRINT_EXPAND_MIN_MAX_MACROS TRUE
+Request: build phase/rule PARALLEL_LOOP_TILING for module kernel_heat_3d.
+  BOOTSTRAP                      building   ENTITIES()
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(heat_3d!)
+  C_PARSER                       building   PARSED_CODE(kernel_heat_3d)
+                                 building   CALLEES(kernel_heat_3d)
+  CONTROLIZER                    building   CODE(kernel_heat_3d)
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(polybench!)
+  C_PARSER                       building   PARSED_CODE(polybench_timer_print)
+                                 building   CALLEES(polybench_timer_print)
+  CONTROLIZER                    building   CODE(polybench_timer_print)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_timer_print)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_timer_print)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_timer_print)
+  C_PARSER                       building   PARSED_CODE(polybench_timer_stop)
+                                 building   CALLEES(polybench_timer_stop)
+  CONTROLIZER                    building   CODE(polybench_timer_stop)
+  C_PARSER                       building   PARSED_CODE(polybench!rtclock)
+                                 building   CALLEES(polybench!rtclock)
+  CONTROLIZER                    building   CODE(polybench!rtclock)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench!rtclock)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench!rtclock)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench!rtclock)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_timer_stop)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_timer_stop)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_timer_stop)
+  C_PARSER                       building   PARSED_CODE(polybench_timer_start)
+                                 building   CALLEES(polybench_timer_start)
+  CONTROLIZER                    building   CODE(polybench_timer_start)
+  C_PARSER                       building   PARSED_CODE(polybench_prepare_instruments)
+                                 building   CALLEES(polybench_prepare_instruments)
+  CONTROLIZER                    building   CODE(polybench_prepare_instruments)
+  C_PARSER                       building   PARSED_CODE(polybench_flush_cache)
+                                 building   CALLEES(polybench_flush_cache)
+  CONTROLIZER                    building   CODE(polybench_flush_cache)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_flush_cache)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_flush_cache)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_flush_cache)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_prepare_instruments)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_prepare_instruments)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_prepare_instruments)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_timer_start)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_timer_start)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_timer_start)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(kernel_heat_3d)
+  ATOMIC_CHAINS                  building   CHAINS(kernel_heat_3d)
+  CONTROLIZER                    building   CODE(heat_3d!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(heat_3d!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(heat_3d!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(heat_3d!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(heat_3d!)
+  C_PARSER                       building   PARSED_CODE(heat_3d!init_array)
+                                 building   CALLEES(heat_3d!init_array)
+  CONTROLIZER                    building   CODE(heat_3d!init_array)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(heat_3d!init_array)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(heat_3d!init_array)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(heat_3d!init_array)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(heat_3d!init_array)
+  C_PARSER                       building   PARSED_CODE(heat_3d!print_array)
+                                 building   CALLEES(heat_3d!print_array)
+  CONTROLIZER                    building   CODE(heat_3d!print_array)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(heat_3d!print_array)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(heat_3d!print_array)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(heat_3d!print_array)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(heat_3d!print_array)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(kernel_heat_3d)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(kernel_heat_3d)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(kernel_heat_3d)
+  C_PARSER                       building   PARSED_CODE(main)
+                                 building   CALLEES(main)
+  CONTROLIZER                    building   CODE(main)
+  C_PARSER                       building   PARSED_CODE(polybench_alloc_data)
+                                 building   CALLEES(polybench_alloc_data)
+  CONTROLIZER                    building   CODE(polybench_alloc_data)
+  C_PARSER                       building   PARSED_CODE(polybench!xmalloc)
+                                 building   CALLEES(polybench!xmalloc)
+  CONTROLIZER                    building   CODE(polybench!xmalloc)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench!xmalloc)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench!xmalloc)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench!xmalloc)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_alloc_data)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_alloc_data)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_alloc_data)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  CONTROLIZER                    building   CODE(polybench!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench!rtclock)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench!xmalloc)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_alloc_data)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_flush_cache)
+  C_PARSER                       building   PARSED_CODE(polybench_free_data)
+                                 building   CALLEES(polybench_free_data)
+  CONTROLIZER                    building   CODE(polybench_free_data)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_free_data)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_free_data)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_free_data)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_free_data)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_prepare_instruments)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_timer_print)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_timer_start)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_timer_stop)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_timer_print)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench!rtclock)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_timer_stop)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_flush_cache)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_prepare_instruments)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_timer_start)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(kernel_heat_3d)
+  CALLGRAPH                      building   CALLERS(heat_3d!)
+                                 building   CALLERS(heat_3d!init_array)
+                                 building   CALLERS(heat_3d!print_array)
+                                 building   CALLERS(kernel_heat_3d)
+                                 building   CALLERS(main)
+                                 building   CALLERS(polybench!)
+                                 building   CALLERS(polybench!rtclock)
+                                 building   CALLERS(polybench!xmalloc)
+                                 building   CALLERS(polybench_alloc_data)
+                                 building   CALLERS(polybench_flush_cache)
+                                 building   CALLERS(polybench_free_data)
+                                 building   CALLERS(polybench_prepare_instruments)
+                                 building   CALLERS(polybench_timer_print)
+                                 building   CALLERS(polybench_timer_start)
+                                 building   CALLERS(polybench_timer_stop)
+                                 building   HEIGHT(heat_3d!)
+                                 building   HEIGHT(heat_3d!init_array)
+                                 building   HEIGHT(heat_3d!print_array)
+                                 building   HEIGHT(kernel_heat_3d)
+                                 building   HEIGHT(main)
+                                 building   HEIGHT(polybench!)
+                                 building   HEIGHT(polybench!rtclock)
+                                 building   HEIGHT(polybench!xmalloc)
+                                 building   HEIGHT(polybench_alloc_data)
+                                 building   HEIGHT(polybench_flush_cache)
+                                 building   HEIGHT(polybench_free_data)
+                                 building   HEIGHT(polybench_prepare_instruments)
+                                 building   HEIGHT(polybench_timer_print)
+                                 building   HEIGHT(polybench_timer_start)
+                                 building   HEIGHT(polybench_timer_stop)
+                                 building   DEPTH(heat_3d!)
+                                 building   DEPTH(heat_3d!init_array)
+                                 building   DEPTH(heat_3d!print_array)
+                                 building   DEPTH(kernel_heat_3d)
+                                 building   DEPTH(main)
+                                 building   DEPTH(polybench!)
+                                 building   DEPTH(polybench!rtclock)
+                                 building   DEPTH(polybench!xmalloc)
+                                 building   DEPTH(polybench_alloc_data)
+                                 building   DEPTH(polybench_flush_cache)
+                                 building   DEPTH(polybench_free_data)
+                                 building   DEPTH(polybench_prepare_instruments)
+                                 building   DEPTH(polybench_timer_print)
+                                 building   DEPTH(polybench_timer_start)
+                                 building   DEPTH(polybench_timer_stop)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(heat_3d!print_array)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(heat_3d!init_array)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench!xmalloc)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_alloc_data)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(kernel_heat_3d)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(kernel_heat_3d)
+  RICE_SEMANTICS_DEPENDENCE_GRAPH building   DG(kernel_heat_3d)
+  PARALLEL_LOOP_TILING           updating   CODE(kernel_heat_3d)
+PARALLEL_LOOP_TILING made for kernel_heat_3d.
+Module kernel_heat_3d selected
+Request: build resource PRINTED_FILE for module kernel_heat_3d.
+  PRINT_CODE                     building   PRINTED_FILE(kernel_heat_3d)
+PRINTED_FILE made for kernel_heat_3d.
+Request: build phase/rule PRIVATIZE_MODULE for module kernel_heat_3d.
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(kernel_heat_3d)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(kernel_heat_3d)
+  ATOMIC_CHAINS                  building   CHAINS(kernel_heat_3d)
+  PRIVATIZE_MODULE               updating   CODE(kernel_heat_3d)
+                                 building   PRIVATIZED(kernel_heat_3d)
+PRIVATIZE_MODULE made for kernel_heat_3d.
+Selecting rule: PRINT_PARALLELIZEDOMP_CODE
+Module kernel_heat_3d selected
+Request: build resource PRINTED_FILE for module kernel_heat_3d.
+  PRINT_CODE                     building   PRINTED_FILE(kernel_heat_3d)
+PRINTED_FILE made for kernel_heat_3d.
+Request: build phase/rule CLEAN_LABELS for module kernel_heat_3d.
+  CLEAN_LABELS                   updating   CODE(kernel_heat_3d)
+CLEAN_LABELS made for kernel_heat_3d.
+Request: build phase/rule KEEP_ONLY_ONE_EXTERN_PARALLEL_LOOP for module kernel_heat_3d.
+  KEEP_ONLY_ONE_EXTERN_PARALLEL_LOOP updating   CODE(kernel_heat_3d)
+KEEP_ONLY_ONE_EXTERN_PARALLEL_LOOP made for kernel_heat_3d.
+Request: build phase/rule UNSPLIT for module main.
+  PRINT_CODE                     building   PRINTED_FILE(heat_3d!)
+  PRINT_CODE                     building   PRINTED_FILE(heat_3d!init_array)
+  PRINT_CODE                     building   PRINTED_FILE(heat_3d!print_array)
+  PRINT_CODE                     building   PRINTED_FILE(kernel_heat_3d)
+  PRINT_CODE                     building   PRINTED_FILE(main)
+  PRINT_CODE                     building   PRINTED_FILE(polybench!)
+  PRINT_CODE                     building   PRINTED_FILE(polybench!rtclock)
+  PRINT_CODE                     building   PRINTED_FILE(polybench!xmalloc)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_alloc_data)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_flush_cache)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_free_data)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_prepare_instruments)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_timer_print)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_timer_start)
+  PRINT_CODE                     building   PRINTED_FILE(polybench_timer_stop)
+  UNSPLIT                        building   USER_FILE()
+UNSPLIT made for main.
+Deletion of obsolete resources:
+40 destroyed.
+Closing all modules.
+  Closing module heat_3d!.
+  Closing module heat_3d!init_array.
+  Closing module heat_3d!print_array.
+  Closing module kernel_heat_3d.
+  Closing module main.
+  Closing module polybench!.
+  Closing module polybench!rtclock.
+  Closing module polybench!xmalloc.
+  Closing module polybench_alloc_data.
+  Closing module polybench_flush_cache.
+  Closing module polybench_free_data.
+  Closing module polybench_prepare_instruments.
+  Closing module polybench_timer_print.
+  Closing module polybench_timer_start.
+  Closing module polybench_timer_stop.
+Closing program.
+Closing workspace.
+Workspace tiling closed.

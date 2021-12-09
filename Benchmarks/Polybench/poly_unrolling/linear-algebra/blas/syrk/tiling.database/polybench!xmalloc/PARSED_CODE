@@ -1,0 +1,16 @@
+0 T71 R77 "TOP-LEVEL:@" -1 -1 !T51 0 T69 (T71 R77 "TOP-LEVEL:@" 519 -1 ""T51 5 T33 R77 "TOP-LEVEL:CONTINUE" (T45 T76 2 T33 R77 "TOP-LEVEL:0" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:1" ()))N))))(R77 "polybench!xmalloc:0`ret" )_T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 521 -1 "/* By default, post-pad the arrays. Safe behavior, but likely useless. */
+"T51 5 T33 R77 "TOP-LEVEL:+=" (T45 T76 0 T68 R77 "polybench!:polybench_inter_array_padding_sz" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:0" ()))N))))()!T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 522 -1 ""T51 5 T33 R77 "TOP-LEVEL:CONTINUE" (T45 T76 2 T33 R77 "TOP-LEVEL:0" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:1" ()))N))))(R77 "polybench!xmalloc:0`padded_sz" )_T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 523 -1 ""T51 5 T33 R77 "TOP-LEVEL:CONTINUE" (T45 T76 2 T33 R77 "TOP-LEVEL:0" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:1" ()))N))))(R77 "polybench!xmalloc:0`err" )_T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 524 -1 ""T51 1 T78 T45 T76 2 T33 R77 "TOP-LEVEL:||" (T45 T76 2 T33 R77 "TOP-LEVEL:__C-logical-not__" (T45 T76 0 T68 R77 "polybench!xmalloc:0`ret" ()))N))))N)T45 T76 0 T68 R77 "polybench!xmalloc:0`err" ()))N))))N)T71 R77 "TOP-LEVEL:@" -1 -1 !T51 0 T69 (T71 R77 "TOP-LEVEL:@" 526 -1 ""T51 5 T33 R77 "TOP-LEVEL:fprintf" (T45 T76 0 T68 R77 "TOP-LEVEL:stderr" ()))N)T45 T76 2 T33 R77 "TOP-LEVEL:\"[PolyBench] posix_memalign: cannot allocate memory\"" ()))N))))()!T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 527 -1 ""T51 5 T33 R77 "TOP-LEVEL:exit" (T45 T76 2 T33 R77 "TOP-LEVEL:1" ()))N))))()!T47 ())T75 0 U)))))()!T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" -1 -1 !T51 0 T69 ()))()!T47 ())T75 0 U))))()!T47 ())T75 0 U))T71 R77 "TOP-LEVEL:@" 543 -1 "/* Safeguard: this is invoked only if polybench.c has been compiled
+     with inter-array padding support from polybench.h. If so, move
+     the starting address of the allocation and return it to the
+     user. The original pointer is registered in an allocation table
+     internal to polybench.c. Data must then be freed using
+     polybench_free_data, which will inspect the allocation table to
+     free the original pointer.*/
+
+
+
+
+
+
+
+"T51 5 T33 R77 "TOP-LEVEL:return" (T45 T76 0 T68 R77 "polybench!xmalloc:0`ret" ()))N))))()!T47 ())T75 0 U)))))(R77 "polybench!xmalloc:0`ret" R77 "polybench!xmalloc:0`padded_sz" R77 "polybench!xmalloc:0`err" )!T47 ())T75 0 U))

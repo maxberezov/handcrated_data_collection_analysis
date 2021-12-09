@@ -1,0 +1,320 @@
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LI
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+#pragma omp parallel for 
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+#pragma omp parallel for private(j_t,k_t)
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+#pragma omp parallel for private(i_l)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+#pragma omp parallel for private(j_l,k_l)
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+#pragma omp parallel for 
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LI
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+#pragma omp parallel for 
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+#pragma omp parallel for private(j_t,k_t)
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+#pragma omp parallel for private(i_l)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+#pragma omp parallel for private(j_l,k_l)
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+#pragma omp parallel for 
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LI
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+#pragma omp parallel for 
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+#pragma omp parallel for private(j_t,k_t)
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+#pragma omp parallel for private(i_l)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+#pragma omp parallel for private(j_l,k_l)
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+#pragma omp parallel for 
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LI
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_syr2k(int n, int m, double alpha, double beta, double C[2600+0][2600+0], double A[2600+0][2000+0], double B[2600+0][2000+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //UPLO  = 'L'
+   //TRANS = 'N'
+   //A is NxM
+   //B is NxM
+   //C is NxN
+   
+   for(i = 0; i <= n-1; i += 1)
+#pragma omp parallel for 
+      for(j = 0; j <= i; j += 1)
+         C[i][j] *= beta;
+   
+   
+   
+#pragma scop
+   polybench_timer_start();
+
+#pragma omp parallel for private(j_t,k_t)
+tiling_3D:
+   for(i_t = 0; i_t <= (n-1)/256; i_t += 1)
+      for(k_t = 0; k_t <= (m-1)/256; k_t += 1)
+#pragma omp parallel for private(i_l)
+         for(j_t = 0; j_t <= i_t; j_t += 1)
+
+#pragma omp parallel for private(j_l,k_l)
+            for(i_l = 256*i_t; i_l <= (((256*i_t+255)<((n-1))) ? (256*i_t+255): ((n-1))); i_l += 1)
+               for(k_l = 256*k_t; k_l <= (((256*k_t+255)<((m-1))) ? (256*k_t+255): ((m-1))); k_l += 1)
+#pragma omp parallel for 
+                  for(j_l = 256*j_t; j_l <= (((i_l)<((256*j_t+255))) ? (i_l): ((256*j_t+255))); j_l += 1)
+                     C[i_l][j_l] += A[j_l][k_l]*alpha*B[i_l][k_l]+B[j_l][k_l]*alpha*A[i_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}

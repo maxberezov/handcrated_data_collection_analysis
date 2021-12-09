@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="309bdcd9-31ba-408d-b446-bd902b0b1f31" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/Unrolling_data_collection.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/polybench-c-4.2.1-beta.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CHANGELOG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/THANKS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datamining/correlation/correlation.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datamining/correlation/correlation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datamining/covariance/covariance.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datamining/covariance/covariance.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/gemm/gemm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/gemm/gemm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/gemver/gemver.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/gemver/gemver.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/gesummv/gesummv.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/gesummv/gesummv.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/symm/symm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/symm/symm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/syr2k/syr2k.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/syr2k/syr2k.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/syrk/syrk.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/syrk/syrk.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/trmm/trmm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/blas/trmm/trmm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/2mm/2mm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/2mm/2mm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/3mm/3mm.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/3mm/3mm.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/atax/atax.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/atax/atax.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/bicg/bicg.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/bicg/bicg.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/doitgen/doitgen.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/doitgen/doitgen.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/mvt/mvt.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/kernels/mvt/mvt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/cholesky/cholesky.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/cholesky/cholesky.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/durbin/durbin.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/durbin/durbin.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/gramschmidt/gramschmidt.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/gramschmidt/gramschmidt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/lu/lu.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/lu/lu.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/ludcmp/ludcmp.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/ludcmp/ludcmp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/trisolv/trisolv.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linear-algebra/solvers/trisolv/trisolv.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/deriche/deriche.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/deriche/deriche.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/floyd-warshall/floyd-warshall.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/floyd-warshall/floyd-warshall.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/nussinov/Nussinov.orig.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/nussinov/nussinov.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/medley/nussinov/nussinov.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/polybench.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/adi/adi.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/adi/adi.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/fdtd-2d/fdtd-2d.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/fdtd-2d/fdtd-2d.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/heat-3d/heat-3d.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/heat-3d/heat-3d.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/jacobi-1d/jacobi-1d.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/jacobi-1d/jacobi-1d.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/jacobi-2d/jacobi-2d.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/jacobi-2d/jacobi-2d.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/seidel-2d/seidel-2d.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stencils/seidel-2d/seidel-2d.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/benchmark_list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/clean.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/create_cpped_version.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/header-gen.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/makefile-gen.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/papi_counters.list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/polybench.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/polybench.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/polybench.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/polybench.spec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/run-all.pl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/template-for-new-benchmark.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utilities/time_benchmark.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../preprocessing_for_unrolling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Data/Dependence_graph/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Data/__init__.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1YFZWTe20sfCHhAzPQEN4fv8lyg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="language.cpp" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="309bdcd9-31ba-408d-b446-bd902b0b1f31" name="Default Changelist" comment="" />
+      <created>1582540333625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582540333625</updated>
+      <workItem from="1582540334917" duration="626000" />
+      <workItem from="1582551667670" duration="29000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="503" y="141" key="FileChooserDialogImpl" timestamp="1582540958971">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="503" y="141" key="FileChooserDialogImpl/65.24.1301.744@65.24.1301.744" timestamp="1582540958971" />
+    <state x="209" y="24" key="SettingsEditor" timestamp="1582540763407">
+      <screen x="65" y="24" width="1301" height="744" />
+    </state>
+    <state x="209" y="24" key="SettingsEditor/65.24.1301.744@65.24.1301.744" timestamp="1582540763407" />
+  </component>
+</project>

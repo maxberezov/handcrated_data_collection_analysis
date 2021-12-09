@@ -1,0 +1,27 @@
+delete tiling
+setenv PIPS_CPP_FLAGS  -I /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/linear-algebra/blas/ -I /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/utilities -DPOLYBENCH_TIME -D EXTRALARGE_DATASET
+create tiling /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/linear-algebra/blas/gemm /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/utilities/polybench.c 
+setproperty ABORT_ON_USER_ERROR TRUE
+setproperty PRETTYPRINT_LANGUAGE "C"
+setproperty PRETTYPRINT_STATEMENT_NUMBER FALSE
+setproperty PRETTYPRINT_INTERNAL_INTRINSICS FALSE
+setproperty FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+setproperty TILE_DIRECTION "TI"
+setproperty LOCAL_TILE_DIRECTION "LI"
+setproperty PRETTYPRINT_MOVE_ALL_LOOP_BOUNDS_UP FALSE
+setproperty PRETTYPRINT_EXPAND_MIN_MAX_MACROS TRUE
+apply PARALLEL_LOOP_TILING[kernel_ge]
+tiling_3D
+8 0 0
+0 8 0
+0 0 8
+display PRINTED_FILE[kernel_ge]
+apply PRIVATIZE_MODULE[kernel_ge]
+activate PRINT_PARALLELIZEDOMP_CODE
+apply COARSE_GRAIN_PARALLELIZATION[kernel_ge]
+display PRINTED_FILE[kernel_ge]
+apply CLEAN_LABELS[kernel_ge]
+apply KEEP_ONLY_ONE_EXTERN_PARALLEL_LOOP[kernel_ge]
+apply UNSPLIT
+close
+quit

@@ -1,0 +1,156 @@
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LI
+void kernel_gemm(int ni, int nj, int nk, double alpha, double beta, double C[2000+0][2300+0], double A[2000+0][2600+0], double B[2600+0][2300+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //TRANSA = 'N'
+   //TRANSB = 'N'
+   // => Form C := alpha*A*B + beta*C,
+   //A is NIxNK
+   //B is NKxNJ
+   //C is NIxNJ
+#pragma scop
+   for(i = 0; i <= ni-1; i += 1)
+      for(j = 0; j <= nj-1; j += 1)
+         C[i][j] *= beta;
+   
+   
+   polybench_timer_start();
+
+tiling_3D:
+   for(i_t = 0; i_t <= (ni-1)/4; i_t += 1)
+      for(k_t = 0; k_t <= (nk-1)/4; k_t += 1)
+         for(j_t = 0; j_t <= (nj-1)/4; j_t += 1)
+
+            for(i_l = 4*i_t; i_l <= (((4*i_t+3)<((ni-1))) ? (4*i_t+3): ((ni-1))); i_l += 1)
+               for(k_l = 4*k_t; k_l <= (((4*k_t+3)<((nk-1))) ? (4*k_t+3): ((nk-1))); k_l += 1)
+                  for(j_l = 4*j_t; j_l <= (((4*j_t+3)<((nj-1))) ? (4*j_t+3): ((nj-1))); j_l += 1)
+                     C[i_l][j_l] += alpha*A[i_l][k_l]*B[k_l][j_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_gemm(int ni, int nj, int nk, double alpha, double beta, double C[2000+0][2300+0], double A[2000+0][2600+0], double B[2600+0][2300+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //TRANSA = 'N'
+   //TRANSB = 'N'
+   // => Form C := alpha*A*B + beta*C,
+   //A is NIxNK
+   //B is NKxNJ
+   //C is NIxNJ
+#pragma scop
+   for(i = 0; i <= ni-1; i += 1)
+#pragma omp parallel for 
+      for(j = 0; j <= nj-1; j += 1)
+         C[i][j] *= beta;
+   
+   
+   polybench_timer_start();
+
+#pragma omp parallel for private(j_t,k_t)
+tiling_3D:
+   for(i_t = 0; i_t <= (ni-1)/4; i_t += 1)
+      for(k_t = 0; k_t <= (nk-1)/4; k_t += 1)
+#pragma omp parallel for private(i_l)
+         for(j_t = 0; j_t <= (nj-1)/4; j_t += 1)
+
+#pragma omp parallel for private(j_l,k_l)
+            for(i_l = 4*i_t; i_l <= (((4*i_t+3)<((ni-1))) ? (4*i_t+3): ((ni-1))); i_l += 1)
+               for(k_l = 4*k_t; k_l <= (((4*k_t+3)<((nk-1))) ? (4*k_t+3): ((nk-1))); k_l += 1)
+#pragma omp parallel for 
+                  for(j_l = 4*j_t; j_l <= (((4*j_t+3)<((nj-1))) ? (4*j_t+3): ((nj-1))); j_l += 1)
+                     C[i_l][j_l] += alpha*A[i_l][k_l]*B[k_l][j_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LI
+void kernel_gemm(int ni, int nj, int nk, double alpha, double beta, double C[2000+0][2300+0], double A[2000+0][2600+0], double B[2600+0][2300+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //TRANSA = 'N'
+   //TRANSB = 'N'
+   // => Form C := alpha*A*B + beta*C,
+   //A is NIxNK
+   //B is NKxNJ
+   //C is NIxNJ
+#pragma scop
+   for(i = 0; i <= ni-1; i += 1)
+      for(j = 0; j <= nj-1; j += 1)
+         C[i][j] *= beta;
+   
+   
+   polybench_timer_start();
+
+tiling_3D:
+   for(i_t = 0; i_t <= (ni-1)/4; i_t += 1)
+      for(k_t = 0; k_t <= (nk-1)/4; k_t += 1)
+         for(j_t = 0; j_t <= (nj-1)/4; j_t += 1)
+
+            for(i_l = 4*i_t; i_l <= (((4*i_t+3)<((ni-1))) ? (4*i_t+3): ((ni-1))); i_l += 1)
+               for(k_l = 4*k_t; k_l <= (((4*k_t+3)<((nk-1))) ? (4*k_t+3): ((nk-1))); k_l += 1)
+                  for(j_l = 4*j_t; j_l <= (((4*j_t+3)<((nj-1))) ? (4*j_t+3): ((nj-1))); j_l += 1)
+                     C[i_l][j_l] += alpha*A[i_l][k_l]*B[k_l][j_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_gemm(int ni, int nj, int nk, double alpha, double beta, double C[2000+0][2300+0], double A[2000+0][2600+0], double B[2600+0][2300+0])
+{
+   int i, j, k;
+   //PIPS generated variable
+   int i_t, k_t, j_t, i_l, k_l, j_l;
+   
+   //BLAS PARAMS
+   //TRANSA = 'N'
+   //TRANSB = 'N'
+   // => Form C := alpha*A*B + beta*C,
+   //A is NIxNK
+   //B is NKxNJ
+   //C is NIxNJ
+#pragma scop
+   for(i = 0; i <= ni-1; i += 1)
+#pragma omp parallel for 
+      for(j = 0; j <= nj-1; j += 1)
+         C[i][j] *= beta;
+   
+   
+   polybench_timer_start();
+
+#pragma omp parallel for private(j_t,k_t)
+tiling_3D:
+   for(i_t = 0; i_t <= (ni-1)/4; i_t += 1)
+      for(k_t = 0; k_t <= (nk-1)/4; k_t += 1)
+#pragma omp parallel for private(i_l)
+         for(j_t = 0; j_t <= (nj-1)/4; j_t += 1)
+
+#pragma omp parallel for private(j_l,k_l)
+            for(i_l = 4*i_t; i_l <= (((4*i_t+3)<((ni-1))) ? (4*i_t+3): ((ni-1))); i_l += 1)
+               for(k_l = 4*k_t; k_l <= (((4*k_t+3)<((nk-1))) ? (4*k_t+3): ((nk-1))); k_l += 1)
+#pragma omp parallel for 
+                  for(j_l = 4*j_t; j_l <= (((4*j_t+3)<((nj-1))) ? (4*j_t+3): ((nj-1))); j_l += 1)
+                     C[i_l][j_l] += alpha*A[i_l][k_l]*B[k_l][j_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}

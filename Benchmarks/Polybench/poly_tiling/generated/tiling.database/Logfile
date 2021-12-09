@@ -1,0 +1,215 @@
+Registering file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/generated/gemm.c
+Checking C syntax of file "/home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/generated/gemm.c"
+Preprocessing file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/generated/gemm.c
+Splitting file    ./tiling.database/Tmp/gemm.cpp_processed.c
+  Module         main
+  Module         kernel_gemm
+  Module         gemm!print_array
+  Module         gemm!init_array
+  Module         gemm!
+Registering file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/utilities/polybench.c
+Checking C syntax of file "/home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/utilities/polybench.c"
+Preprocessing file /home/maksim/PycharmProjects/data_collection_unrolling/Benchmarks/Polybench/poly_tiling/utilities/polybench.c
+Splitting file    ./tiling.database/Tmp/polybench.cpp_processed.c
+  Module         polybench_alloc_data
+  Module         polybench_free_data
+  Module         polybench!xmalloc
+  Module         polybench_timer_print
+  Module         polybench_timer_stop
+  Module         polybench_timer_start
+  Module         polybench_prepare_instruments
+  Module         polybench_flush_cache
+  Module         polybench!rtclock
+  Module         polybench!
+Workspace tiling created and opened.
+Main module PROGRAM "main" selected.
+Module main selected
+setproperty ABORT_ON_USER_ERROR TRUE
+setproperty PRETTYPRINT_LANGUAGE "C"
+setproperty PRETTYPRINT_STATEMENT_NUMBER FALSE
+setproperty PRETTYPRINT_INTERNAL_INTRINSICS FALSE
+setproperty FOR_TO_DO_LOOP_IN_CONTROLIZER TRUE
+setproperty TILE_DIRECTION "TI"
+setproperty LOCAL_TILE_DIRECTION "LP"
+setproperty PRETTYPRINT_MOVE_ALL_LOOP_BOUNDS_UP FALSE
+setproperty PRETTYPRINT_EXPAND_MIN_MAX_MACROS TRUE
+Request: build phase/rule PARALLEL_LOOP_TILING for module kernel_gemm.
+  BOOTSTRAP                      building   ENTITIES()
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(gemm!)
+  C_PARSER                       building   PARSED_CODE(kernel_gemm)
+                                 building   CALLEES(kernel_gemm)
+  CONTROLIZER                    building   CODE(kernel_gemm)
+  COMPILATION_UNIT_PARSER        building   DECLARATIONS(polybench!)
+  C_PARSER                       building   PARSED_CODE(polybench_timer_print)
+                                 building   CALLEES(polybench_timer_print)
+  CONTROLIZER                    building   CODE(polybench_timer_print)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_timer_print)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_timer_print)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_timer_print)
+  C_PARSER                       building   PARSED_CODE(polybench_timer_stop)
+                                 building   CALLEES(polybench_timer_stop)
+  CONTROLIZER                    building   CODE(polybench_timer_stop)
+  C_PARSER                       building   PARSED_CODE(polybench!rtclock)
+                                 building   CALLEES(polybench!rtclock)
+  CONTROLIZER                    building   CODE(polybench!rtclock)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench!rtclock)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench!rtclock)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench!rtclock)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_timer_stop)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_timer_stop)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_timer_stop)
+  C_PARSER                       building   PARSED_CODE(polybench_timer_start)
+                                 building   CALLEES(polybench_timer_start)
+  CONTROLIZER                    building   CODE(polybench_timer_start)
+  C_PARSER                       building   PARSED_CODE(polybench_prepare_instruments)
+                                 building   CALLEES(polybench_prepare_instruments)
+  CONTROLIZER                    building   CODE(polybench_prepare_instruments)
+  C_PARSER                       building   PARSED_CODE(polybench_flush_cache)
+                                 building   CALLEES(polybench_flush_cache)
+  CONTROLIZER                    building   CODE(polybench_flush_cache)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_flush_cache)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_flush_cache)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_flush_cache)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_prepare_instruments)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_prepare_instruments)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_prepare_instruments)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_timer_start)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_timer_start)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_timer_start)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(kernel_gemm)
+  ATOMIC_CHAINS                  building   CHAINS(kernel_gemm)
+  CONTROLIZER                    building   CODE(gemm!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(gemm!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(gemm!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(gemm!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(gemm!)
+  C_PARSER                       building   PARSED_CODE(gemm!init_array)
+                                 building   CALLEES(gemm!init_array)
+  CONTROLIZER                    building   CODE(gemm!init_array)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(gemm!init_array)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(gemm!init_array)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(gemm!init_array)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(gemm!init_array)
+  C_PARSER                       building   PARSED_CODE(gemm!print_array)
+                                 building   CALLEES(gemm!print_array)
+  CONTROLIZER                    building   CODE(gemm!print_array)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(gemm!print_array)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(gemm!print_array)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(gemm!print_array)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(gemm!print_array)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(kernel_gemm)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(kernel_gemm)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(kernel_gemm)
+  C_PARSER                       building   PARSED_CODE(main)
+                                 building   CALLEES(main)
+  CONTROLIZER                    building   CODE(main)
+  C_PARSER                       building   PARSED_CODE(polybench_alloc_data)
+                                 building   CALLEES(polybench_alloc_data)
+  CONTROLIZER                    building   CODE(polybench_alloc_data)
+  C_PARSER                       building   PARSED_CODE(polybench!xmalloc)
+                                 building   CALLEES(polybench!xmalloc)
+  CONTROLIZER                    building   CODE(polybench!xmalloc)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench!xmalloc)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench!xmalloc)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench!xmalloc)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_alloc_data)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_alloc_data)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_alloc_data)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(main)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(main)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(main)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(main)
+  CONTROLIZER                    building   CODE(polybench!)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench!)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench!)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench!)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench!rtclock)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench!xmalloc)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_alloc_data)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_flush_cache)
+  C_PARSER                       building   PARSED_CODE(polybench_free_data)
+                                 building   CALLEES(polybench_free_data)
+  CONTROLIZER                    building   CODE(polybench_free_data)
+  PROPER_EFFECTS                 building   PROPER_EFFECTS(polybench_free_data)
+  CUMULATED_EFFECTS              building   CUMULATED_EFFECTS(polybench_free_data)
+  SUMMARY_EFFECTS                building   SUMMARY_EFFECTS(polybench_free_data)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_free_data)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_prepare_instruments)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_timer_print)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_timer_start)
+  INITIAL_PRECONDITION           building   INITIAL_PRECONDITION(polybench_timer_stop)
+  PROGRAM_PRECONDITION           building   PROGRAM_PRECONDITION()
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_timer_print)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench!rtclock)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_timer_stop)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_flush_cache)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_prepare_instruments)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_timer_start)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(kernel_gemm)
+  CALLGRAPH                      building   CALLERS(gemm!)
+                                 building   CALLERS(gemm!init_array)
+                                 building   CALLERS(gemm!print_array)
+                                 building   CALLERS(kernel_gemm)
+                                 building   CALLERS(main)
+                                 building   CALLERS(polybench!)
+                                 building   CALLERS(polybench!rtclock)
+                                 building   CALLERS(polybench!xmalloc)
+                                 building   CALLERS(polybench_alloc_data)
+                                 building   CALLERS(polybench_flush_cache)
+                                 building   CALLERS(polybench_free_data)
+                                 building   CALLERS(polybench_prepare_instruments)
+                                 building   CALLERS(polybench_timer_print)
+                                 building   CALLERS(polybench_timer_start)
+                                 building   CALLERS(polybench_timer_stop)
+                                 building   HEIGHT(gemm!)
+                                 building   HEIGHT(gemm!init_array)
+                                 building   HEIGHT(gemm!print_array)
+                                 building   HEIGHT(kernel_gemm)
+                                 building   HEIGHT(main)
+                                 building   HEIGHT(polybench!)
+                                 building   HEIGHT(polybench!rtclock)
+                                 building   HEIGHT(polybench!xmalloc)
+                                 building   HEIGHT(polybench_alloc_data)
+                                 building   HEIGHT(polybench_flush_cache)
+                                 building   HEIGHT(polybench_free_data)
+                                 building   HEIGHT(polybench_prepare_instruments)
+                                 building   HEIGHT(polybench_timer_print)
+                                 building   HEIGHT(polybench_timer_start)
+                                 building   HEIGHT(polybench_timer_stop)
+                                 building   DEPTH(gemm!)
+                                 building   DEPTH(gemm!init_array)
+                                 building   DEPTH(gemm!print_array)
+                                 building   DEPTH(kernel_gemm)
+                                 building   DEPTH(main)
+                                 building   DEPTH(polybench!)
+                                 building   DEPTH(polybench!rtclock)
+                                 building   DEPTH(polybench!xmalloc)
+                                 building   DEPTH(polybench_alloc_data)
+                                 building   DEPTH(polybench_flush_cache)
+                                 building   DEPTH(polybench_free_data)
+                                 building   DEPTH(polybench_prepare_instruments)
+                                 building   DEPTH(polybench_timer_print)
+                                 building   DEPTH(polybench_timer_start)
+                                 building   DEPTH(polybench_timer_stop)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(gemm!print_array)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(gemm!init_array)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench!xmalloc)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(polybench_alloc_data)
+  TRANSFORMERS_INTER_FULL        building   TRANSFORMERS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(main)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(main)
+  INTERPROCEDURAL_SUMMARY_PRECONDITION building   SUMMARY_PRECONDITION(kernel_gemm)
+  PRECONDITIONS_INTER_FULL       building   PRECONDITIONS(kernel_gemm)
+  RICE_SEMANTICS_DEPENDENCE_GRAPH building   DG(kernel_gemm)
+  PARALLEL_LOOP_TILING           updating   CODE(kernel_gemm)
+PARALLEL_LOOP_TILING made for kernel_gemm.
+Module kernel_gemm selected
+Request: build resource PRINTED_FILE for module kernel_gemm.
+  PRINT_CODE                     building   PRINTED_FILE(kernel_gemm)
+interruption signal 1 caught!
+interrupting pipsmake as soon as possible...
+interruption signal 15 caught!
+interrupting pipsmake as soon as possible...
+interruption signal 1 caught!
+interrupting pipsmake as soon as possible...

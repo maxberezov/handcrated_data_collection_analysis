@@ -1,0 +1,45 @@
+GENERATED TILE DIRECTION=TI - LOCAL TILE DIRECTION=LS
+void kernel_heat_3d(int tsteps, int n, double A[40+0][40+0][40+0], double B[40+0][40+0][40+0])
+{
+   int t, i, j, k;
+   //PIPS generated variable
+   int j_t, k_t, j_l, k_l;
+
+#pragma scop
+   polybench_timer_start();
+
+   for(i = 1; i <= n-1-1; i += 1)
+loop_1:
+      for(j_t = 0; j_t <= (n-3)/8; j_t += 1)
+         for(k_t = 0; k_t <= (n-3)/4; k_t += 1)
+            for(j_l = 8*j_t+1; j_l <= (((8*j_t+8)<((n-2))) ? (8*j_t+8): ((n-2))); j_l += 1)
+               for(k_l = 4*k_t+1; k_l <= (((4*k_t+4)<((n-2))) ? (4*k_t+4): ((n-2))); k_l += 1)
+                  B[i][j_l][k_l] = 0.125*(A[i+1][j_l][k_l]-2.0*A[i][j_l][k_l]+A[i-1][j_l][k_l])+0.125*(A[i][j_l+1][k_l]-2.0*A[i][j_l][k_l]+A[i][j_l-1][k_l])+0.125*(A[i][j_l][k_l+1]-2.0*A[i][j_l][k_l]+A[i][j_l][k_l-1])+A[i][j_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
+void kernel_heat_3d(int tsteps, int n, double A[40+0][40+0][40+0], double B[40+0][40+0][40+0])
+{
+   int t, i, j, k;
+   //PIPS generated variable
+   int j_t, k_t, j_l, k_l;
+
+#pragma scop
+   polybench_timer_start();
+
+   for(i = 1; i <= n-1-1; i += 1)
+loop_1:
+      for(j_t = 0; j_t <= (n-3)/8; j_t += 1)
+         for(k_t = 0; k_t <= (n-3)/4; k_t += 1)
+            for(j_l = 8*j_t+1; j_l <= (((8*j_t+8)<((n-2))) ? (8*j_t+8): ((n-2))); j_l += 1)
+               for(k_l = 4*k_t+1; k_l <= (((4*k_t+4)<((n-2))) ? (4*k_t+4): ((n-2))); k_l += 1)
+                  B[i][j_l][k_l] = 0.125*(A[i+1][j_l][k_l]-2.0*A[i][j_l][k_l]+A[i-1][j_l][k_l])+0.125*(A[i][j_l+1][k_l]-2.0*A[i][j_l][k_l]+A[i][j_l-1][k_l])+0.125*(A[i][j_l][k_l+1]-2.0*A[i][j_l][k_l]+A[i][j_l][k_l-1])+A[i][j_l][k_l];
+   polybench_timer_stop();
+
+   polybench_timer_print();
+#pragma endscop
+
+}
